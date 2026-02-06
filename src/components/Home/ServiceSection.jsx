@@ -22,9 +22,8 @@ const services = [
     path: "/services/service",
   },
   {
-    title: "Paint Protection Film",
-    desc: `A clear protective layer that shields your paint from scratches, chips, and road debris.
-`,
+    title: "Ceramic Coatings:",
+    desc: `A durable protective layer that enhances gloss while protecting paint from dirt, UV rays, and chemical damage.`,
     image: "/carmechanic.avif",
     path: "/services/mot",
   },
@@ -144,7 +143,7 @@ const ServiceSection = () => {
                 key={index}
                 className="relative min-w-[300px] md:min-w-[400px] h-[520px] rounded-lg shadow-lg border-primary border
               overflow-hidden group
-             hover:scale-105 active:scale-105 bg-white hover:shadow-primary hover:border-primary/80  transition-all duration-300"
+             hover:scale-105 active:scale-105 bg-black/80 hover:shadow-primary hover:border-primary/80  transition-all duration-300"
                 data-aos="fade-up"
                 data-aos-delay={index * 150} // staggered animation for each card
               >
@@ -153,7 +152,7 @@ const ServiceSection = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-[70%] mx-auto mt-15 h-65 object-cover"
+                    className="absolute inset-0 w-[60%] mx-auto mt-25 h-25 object-cover"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = "/logo.png"; // fallback logo
